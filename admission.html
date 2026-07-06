@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions –BUSIU SECONDARY SCHOOL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .section-pad { padding: 80px 0; }
+    .section-pad.alt { background: var(--light); }
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; counter-reset: steps; }
+    .process-card {
+      background: var(--white); border-radius: var(--radius); padding: 28px 22px;
+      box-shadow: var(--shadow); text-align: center; position: relative; overflow: hidden;
+      transition: var(--transition);
+    }
+    .process-card:hover { transform: translateY(-5px); }
+    .process-card::before {
+      counter-increment: steps;
+      content: counter(steps);
+      position: absolute; top: 14px; right: 18px;
+      font-size: 3rem; font-weight: 900;
+      color: rgba(26,60,110,.06);
+    }
+    .process-icon { font-size: 2.4rem; margin-bottom: 12px; }
+    .process-title { font-size: .95rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .process-text { font-size: .82rem; color: #6b7280; line-height: 1.6; }
+    .fee-table { width: 100%; border-collapse: collapse; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .fee-table th { background: var(--primary); color: var(--white); padding: 14px 20px; text-align: left; font-size: .88rem; }
+    .fee-table td { padding: 13px 20px; font-size: .88rem; border-bottom: 1px solid var(--light); }
+    .fee-table tr:last-child td { border-bottom: none; }
+    .fee-table tr:nth-child(even) td { background: #fafafa; }
+    .faq-item { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 12px; overflow: hidden; }
+    .faq-q {
+      padding: 18px 22px; font-weight: 600; font-size: .92rem; color: var(--primary);
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      transition: var(--transition);
+    }
+    .faq-q:hover { background: var(--light); }
+    .faq-a { padding: 0 22px 18px; font-size: .88rem; color: #4b5563; line-height: 1.8; display: none; }
+    .faq-a.open { display: block; }
+    .faq-icon { transition: var(--transition); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <div><i class="fa fa-phone"></i> &nbsp;+256-754 005 892 &nbsp;|&nbsp; <i class="fa fa-envelope"></i> &nbsp;<a href="mailto:info@busiusecondaryschool.com">info@busiusecondaryschool.com</a></div>
+    <div class="topbar-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="admission.html" style="background:var(--secondary);color:var(--dark);padding:3px 12px;border-radius:4px;font-weight:600;">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="busiu.jpg" alt="Busiu Secondary School Logo" class="brand-logo">
+      <div class="brand-text">
+        <div class="brand-name">BUSIU SECONDARY SCHOOL</div>
+        <div class="brand-tagline">Building Knowledge, Character, and Excellence for a Better Future</div>
+      </div>
+    </a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cocurricular.html">Activities</a></li>
+      <li><a href="admission.html" class="btn btn-primary active">Admissions</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Admissions 2025–2026</h1><strong>
+<marquee class="auto-style7">Begin your child's journey to excellence at Busiu Secondary School</marquee></strong>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <i class="fa fa-chevron-right" style="font-size:.65rem"></i> <span>Admissions</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-pad">
+  <div class="container">
+    <p class="section-title" data-animate>Admission Process</p>
+    <p class="section-sub" data-animate>Simple steps to join Busiu Secondary School family</p>
+    <div class="process-grid">
+      <div class="process-card" data-animate>
+        <div class="process-icon">📋</div>
+        <h3 class="process-title">1. Complete Application</h3>
+        <p class="process-text">Fill out the online admission form below with accurate information about the applicant and parent/guardian.</p>
+      </div>
+      <div class="process-card" data-animate data-delay="100">
+        <div class="process-icon">📁</div>
+        <h3 class="process-title">2. Submit Documents</h3>
+        <p class="process-text">Bring certified copies of birth certificate,Result Slips of P.7,S.4 any of those, last school report, immunisation records, and two passport photos.</p>
+      </div>
+      <div class="process-card" data-animate data-delay="200">
+        <div class="process-icon">✍️</div>
+        <h3 class="process-title">3. Entrance Assessment</h3>
+        <p class="process-text">Applicants sit a short assessment in English and Mathematics. The date is confirmed by email after document review.</p>
+      </div>
+      <div class="process-card" data-animate data-delay="300">
+        <div class="process-icon">🤝</div>
+        <h3 class="process-title">4. Interview</h3>
+        <p class="process-text">Shortlisted applicants and parents attend a brief interview with our admissions team to discuss expectations.</p>
+      </div>
+      <div class="process-card" data-animate data-delay="400">
+        <div class="process-icon">✅</div>
+        <h3 class="process-title">5. Offer &amp; Enrolment</h3>
+        <p class="process-text">Successful applicants receive an offer letter. Pay the registration fee to secure your child's place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="section-pad alt">
+  <div class="container">
+    <p class="section-title" data-animate>School Fees 2025–2026</p>
+    <p class="section-sub" data-animate>Transparent, all-inclusive fee structure with flexible payment options</p>
+    <div data-animate>
+      <table class="fee-table">
+        <thead>
+          <tr><th>Class</th><th>Year Group</th><th>Term Fee</th><th>Annual Fee</th><th>What's Included</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Senior One</td><td>Years 1–3</td><td>UGX8,500</td><td>UGX298,400</td><td>Tuition, Books, Uniform, Lunch</td></tr>
+          <tr><td>Senior Two</td><td>Years 4–6</td><td>UGX9,500</td><td>UGX2,700</td><td>Tuition, Books, Uniform, Lunch</td></tr>
+          <tr><td>Senior Three</td><td>Years 7–9</td><td>UGX10,100</td><td>UGX300,100</td><td>Tuition, Books, Lab Fees, Lunch</td></tr>
+          <tr><td>Senior Four</td><td>Years 10–11</td><td>UGX100,300</td><td>UGX380,700</td><td>Tuition, Books, Lab &amp; Tech Fees, Lunch</td></tr>
+          <tr><td>Senior Five</td><td>Year 12</td><td>UGX500,450</td><td>UGX390,100</td><td>Tuition, Exam Registration, Prep Classes, Lunch</td></tr>
+          <tr><td>Senior Six</td><td>Year 12</td><td>UGX700,450</td><td>UGX500,100</td><td>Tuition, Exam Registration, Prep Classes, Lunch</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.82rem;color:#9ca3af;margin-top:12px;text-align:right;"><i class="fa fa-info-circle"></i> &nbsp;Sibling discounts of 10% apply from the 2nd child. Bursaries available — ask at the admissions office.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="admission" id="applyNow">
+  <div class="container">
+    <p class="section-title" data-animate>Online Admission Form</p>
+    <p class="section-sub" data-animate>All fields marked <span style="color:var(--accent)">*</span> are required to be filled</p>
+    <div class="form-wrap" data-animate>
+      <div class="form-header">
+        <h2><i class="fa fa-graduation-cap"></i> &nbsp;Student Application Form</h2>
+        <p>Academic Year 2025–2026 &nbsp;|&nbsp; Busiu Secondary School</p>
+      </div>
+
+      <div class="form-body" id="formContent">
+        <form id="admissionForm" novalidate>
+          <div class="form-grid">
+
+            <!-- SECTION: Student Details -->
+            <div class="form-section-title"><i class="fa fa-user-graduate" style="margin-right:8px"></i>Student Information</div>
+
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name <span>*</span></label>
+              <input type="text" id="firstName" class="form-control" placeholder="e.g. Ali" required>
+              <p class="error-msg" id="firstNameError">Please enter the student's first name.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name <span>*</span></label>
+              <input type="text" id="lastName" class="form-control" placeholder="e.g. Magomu" required>
+              <p class="error-msg" id="lastNameError">Please enter the student's last name.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dob">Date of Birth <span>*</span></label>
+              <input type="date" id="dob" class="form-control" required data-min-age="4" data-max-age="20">
+              <p class="error-msg" id="dobError">Please enter a valid date of birth (age 15–28).</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="gender">Gender <span>*</span></label>
+              <select id="gender" class="form-control" required>
+                <option value="">-- Select --</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not to say</option>
+              </select>
+              <p class="error-msg" id="genderError">Please select a gender.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="gender">Application Class<span>*</span></label>
+              <select id="Class" class="form-control" required>
+                <option value="">-- Select --</option>
+                <option>Senior One</option>
+                <option>Senior Two</option>
+                <option>Senior Three</option>
+                <option>Senior Four</option>
+                <option>Senior Five</option>
+                <option>Senior Six</option>
+                <option>Prefer not to say</option>
+              </select>
+              <p class="error-msg" id="ClassError">Please select a Class.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="Hobbies">Choose your Favorite Hobby <span>*</span></label>
+              <select id="Hobby" class="form-control" required>
+                <option value="">-- Select --</option>
+                <option>Football ⚽ </option>
+                <option>Volleyball 🏐 </option>
+                <option>Swimming 🏊 </option>
+                <option>Athletics</option>
+                <option>Reading 📖 </option>
+                <option>Listening to Music 🎶 </option>
+                <option>Singing 🎤 </option>
+                <option>Prefer not to say</option>
+              </select>
+              <p class="error-msg" id="HobbyError">Please select a Hobby.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="Term">Select Academic Term<span>*</span></label>
+              <select id="Academic Term" class="form-control" required>
+                <option value="">-- Select Academic Term --</option>
+                <option>Term 1</option><option>Term 2</option><option>Term 3</option>
+              </select>
+              <p class="error-msg" id="Academic TermError">Please select your Academic Term.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="prevSchool">Previous School</label>
+              <input type="text" id="prevSchool" class="form-control" placeholder="Name of last school attended">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="nationality">Nationality <span>*</span></label>
+              <input type="text" id="nationality" class="form-control" placeholder="e.g. Ugandan" required>
+              <p class="error-msg" id="nationalityError">Please enter nationality.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="religion">Religion</label>
+              <select id="religion" class="form-control">
+                <option value="">-- Select (Optional) --</option>
+                <option>Christianity</option><option>Islam</option><option>Catholic</option><option>Other</option><option>Prefer not to say</option>
+              </select>
+            </div>
+
+              <strong>Upload Academic Documents </strong>:&nbsp;&nbsp;<input name="File1" type="file"</>&nbsp;(Optional)
+
+            <!-- SECTION: Parent Details -->
+            <div class="form-section-title" style="margin-top:12px"><i class="fa fa-users" style="margin-right:8px"></i>Parent / Guardian Information</div>
+
+            <div class="form-group">
+              <label class="form-label" for="parentName">Full Name <span>*</span></label>
+              <input type="text" id="parentName" class="form-control" placeholder="Parent or guardian's full name" required>
+              <p class="error-msg" id="parentNameError">Please enter the parent/guardian's name.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="relationship">Relationship to Student <span>*</span></label>
+              <select id="relationship" class="form-control" required>
+                <option value="">-- Select --</option>
+                <option>Mother</option><option>Father</option><option>Guardian</option><option>Sponsor</option><option>Other</option>
+              </select>
+              <p class="error-msg" id="relationshipError">Please select a relationship.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number <span>*</span></label>
+              <input type="tel" id="phone" class="form-control" placeholder="+256 754 005 892" required>
+              <p class="error-msg" id="phoneError">Please enter a valid phone number.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address <span>*</span></label>
+              <input type="email" id="email" class="form-control" placeholder="plannedhustler454@gmail.com" required>
+              <p class="error-msg" id="emailError">Please enter a valid email address.</p>
+            </div>
+
+            <div class="form-group full">
+              <label class="form-label" for="address">Home Address <span>*</span></label>
+              <input type="text" id="address" class="form-control" placeholder="Street, City, Postcode" required>
+              <p class="error-msg" id="addressError">Please enter your home address.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="occupation">Parent Occupation</label>
+              <input type="text" id="occupation" class="form-control" placeholder="e.g. Teacher, Engineer">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="emergencyContact">Emergency Contact Number <span>*</span></label>
+              <input type="tel" id="emergencyContact" class="form-control" placeholder="+256 754 005 892" required>
+              <p class="error-msg" id="emergencyContactError">Please enter an emergency contact number.</p>
+            </div>
+
+            <!-- SECTION: Additional -->
+            <div class="form-section-title" style="margin-top:12px"><i class="fa fa-clipboard-list" style="margin-right:8px"></i>Additional Information</div>
+
+            <div class="form-group full">
+              <label class="form-label" for="medicalInfo">Medical Conditions / Allergies</label>
+              <textarea id="medicalInfo" class="form-control" placeholder="List any medical conditions, allergies, or special needs the school should be aware of (or write 'None')"></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label class="form-label" for="whyUs">Why do you want to enrol at Busiu Secondary School? <span>*</span></label>
+              <textarea id="whyUs" class="form-control" placeholder="Tell us why Busiu Secondary School is the right school for your child..." required></textarea>
+              <p class="error-msg" id="whyUsError">Please tell us why you'd like to join Busiu Secondary School.</p>
+            </div>
+
+            <div class="form-group full">
+              <label class="form-label" for="heardAbout">How did you hear about us?</label>
+              <select id="heardAbout" class="form-control">
+                <option value="">-- Select --</option>
+                <option>Friend or Family</option><option>Social Media</option><option>Google Search</option>
+                <option>School Open Day</option><option>Newspaper / Magazine</option><option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group full" style="display:flex;align-items:flex-start;gap:10px;padding-top:8px;">
+              <input type="checkbox" id="agreeTerms" style="margin-top:3px;width:16px;height:16px;cursor:pointer;accent-color:var(--primary);" required>
+              <label for="agreeTerms" style="font-size:.88rem;cursor:pointer;line-height:1.5;">
+                I <strong>confirm</strong> that the information provided is accurate and I agree to the <a href="#" style="color:var(--primary);font-weight:600;">Admission Terms &amp; Conditions</a> and <a href="#" style="color:var(--primary);font-weight:600;">Privacy Policy</a> of Busiu Secondary School. <span style="color:var(--accent)">*</span>
+              </label>
+            </div>
+
+            <div class="form-submit">
+              <button type="button" class="btn" style="background:var(--light);color:var(--dark);" onclick="document.getElementById('admissionForm').reset()">Reset Form</button>
+              <button type="submit" class="btn btn-submit"><i class="fa fa-paper-plane" style="margin-right:8px"></i>Submit Application</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div class="form-success" id="formSuccess">
+        <i class="fa fa-check-circle"></i>
+        <h3>Application Submitted Successfully!</h3>
+        <p>Thank you for applying to <strong>Busiu Secondary School</strong>. We have received your application and shall will contact you within <strong>5 working days</strong> to confirm receipt and provide next steps.</p>
+        <p style="margin-top:12px;font-size:.85rem;color:#9ca3af;">Please check your email inbox (including spam) for a confirmation message.</p>
+        <a href="index.html" class="btn btn-primary" style="margin-top:24px;">Return to Homepage</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad alt">
+  <div class="container">
+    <p class="section-title" data-animate>Frequently Asked Questions</p>
+    <p class="section-sub" data-animate>Common questions from prospective families</p>
+    <div style="max-width:740px;margin:0 auto;" data-animate>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Where does Busiu Secondary School accept students from?
+          <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-a">We accept students from age 15:26 01/07/2026 (Foundation Year 1) through to Year 12 (age 15–27). All prospective students complete an entrance assessment before placement.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is there a sibling discount?
+          <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-a">Yes. A 10% discount on tuition fees applies from the second child onwards. The discount is applied automatically upon enrolment. Please inform the admissions office if you have siblings already enrolled.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          When does the new academic year begin?
+          <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-a">The academic year begins in early January. Term dates are published on our website in September each year. The 2025–2026 school year begins on 7 January 2026.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do you offer bursaries or financial assistance at Busiu Secondary School?
+          <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-a">Yes. A limited number of need-based bursaries are available each year covering up to 50% of tuition fees. Bursary applications are assessed separately. Contact the admissions office for details and deadlines.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What Academic documents do I need to bring at Busiu Secondary School?
+          <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-a">You will need: (1) Birth certificate (certified copy), (2) Most recent school report or academic record, (3) Immunisation / vaccination records, (4) Two recent passport-size photographs, and (5) Parent/guardian's ID document.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can my child join Mid-term?
+          <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-a">Mid-term placements are considered on a case-by-case basis depending on space availability and academic readiness. Please contact the admissions office directly to discuss a mid-term application.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div>  <img src="busiu.jpg" alt="Busiu Secondary School Logo" class="brand-logo">
+          <p class="footer-brand-name">Busiu Secondary School</p>
+          <p class="footer-brand-desc">Nurturing young minds with quality education since 1985.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa fa-chevron-right" style="font-size:.65rem;margin-right:6px;"></i>Home</a></li>
+            <li><a href="academics.html"><i class="fa fa-chevron-right" style="font-size:.65rem;margin-right:6px;"></i>Academics</a></li>
+            <li><a href="projects.html"><i class="fa fa-chevron-right" style="font-size:.65rem;margin-right:6px;"></i>Projects</a></li>
+            <li><a href="cocurricular.html"><i class="fa fa-chevron-right" style="font-size:.65rem;margin-right:6px;"></i>Activities</a></li>
+            <li><a href="admission.html"><i class="fa fa-chevron-right" style="font-size:.65rem;margin-right:6px;"></i>Admissions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">School Hours</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fa fa-clock" style="margin-right:6px;color:var(--secondary)"></i>Mon–Fri: 8:00am – 4:45pm</a></li>
+            <li><a href="#"><i class="fa fa-clock" style="margin-right:6px;color:var(--secondary)"></i>Saturday: 8:00am – 4:45pm</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <ul class="footer-contact">
+            <li><i class="fa fa-map-marker-alt"></i><span>Busiu Secondary School, Mbale District, Eastern Uganda,Opposite Wonder Foam Mattress Company</span></li>
+            <li><i class="fa fa-phone"></i><span>+256 754 005 892</span></li>
+            <li><i class="fa fa-envelope"></i><span><a href="mailto:info@busiusecondaryschool.com" style="color:inherit;">info@busiusecondaryschool.com</a></span></li>
+           <li><i class="fa fa-globe"></i><span>www.busiusecondaryschool.com</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Busiu Secondary School. All rights reserved.</p>
+<p>&copy; 2026 Developed by Ali. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fa fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script>
+function toggleFaq(el) {
+  const item   = el.parentElement;
+  const answer = item.querySelector('.faq-a');
+  const icon   = el.querySelector('.faq-icon');
+  const isOpen = item.classList.contains('open');
+  // close all
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-a').classList.remove('open');
+    i.querySelector('.faq-icon').style.transform = '';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.classList.add('open');
+    icon.style.transform = 'rotate(45deg)';
+  }
+}
+</script>
+</body>
+</html>
